@@ -109,7 +109,7 @@ mse = mean_squared_error(y_test, y_pred)
 rmse = np.sqrt(mse)
 r2 = r2_score(y_test, y_pred)
 
-print("📊 Model Performansı (Decision Tree)")
+print("Model Performansı (Decision Tree)")
 print(f"MAE  : {mae:.2f}")
 print(f"MSE  : {mse:.2f}")
 print(f"RMSE : {rmse:.2f}")
@@ -122,7 +122,7 @@ percent_rmse = (rmse / mean_y) * 100
 print(f"MAE yüzdesi : {percent_mae:.2f}%")
 print(f"RMSE yüzdesi: {percent_rmse:.2f}%")
 
-print("\n📌 Yeni değerler giriniz:")
+print("\nYeni değerler giriniz:")
 usd_try = float(input("USD/TRY kuru: "))
 eur_try = float(input("EUR/TRY kuru: "))
 gbp_try = float(input("GBP/TRY kuru: "))
@@ -148,7 +148,7 @@ yeni_veri = pd.DataFrame([[usd_try, eur_try, gbp_try,
                           columns=X.columns)
 
 tahmin = model.predict(yeni_veri)[0]
-print(f"\n🔮 Tahmin edilen Tüketici Fiyat Endeksi: {tahmin:.2f}")
+print(f"\nTahmin edilen Tüketici Fiyat Endeksi: {tahmin:.2f}")
 """
 # -------------------------------------------------------------------
 
@@ -210,7 +210,7 @@ yeni_veri = pd.DataFrame([[usd_try, eur_try, gbp_try,
                           columns=X.columns)
 
 tahmin_kategori = clf.predict(yeni_veri)[0]
-print(f"\n🔮 Tahmin edilen Tüketici Fiyat Endeksi Kategorisi: {tahmin_kategori}")
+print(f"\nTahmin edilen Tüketici Fiyat Endeksi Kategorisi: {tahmin_kategori}")
 """
 # ---------------------------------------------------------------------
 
